@@ -1,0 +1,1024 @@
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat:wght@100..900&display=swap");
+
+:root {
+  --first-color: hsl(353, 93%, 50%);
+  --first-color-alt: hsl(353, 93%, 46%);
+  --first-color-dark: hsl(353, 50%, 15%);
+  --title-color: hsl(353, 48%, 12%);
+  --text-color: hsl(353, 16%, 32%);
+  --text-color-light: hsl(353, 16%, 48%);
+  --white-color: hsl(24, 86%, 90%);
+  --body-color: hsl(24, 86%, 88%);
+  --container-color: hsl(24, 86%, 92%);
+  --shadow-small-img: drop-shadow(0 4px 16px hsla(353, 100%, 8%, .2));
+  --shadow-big-img: drop-shadow(0 8px 24px hsla(353, 100%, 8%, .2));
+
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Carter One", system-ui;
+  --z-fixed: 100;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: 1rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.header_container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed);
+  transition: box-shadow .4s;
+}
+.shadow_header {
+  box-shadow: 0 0.4rem 1rem hsla(353, 100%, 8%, .1);
+}
+
+.nav_container {
+  position: relative;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+.nav_title h1{
+  font-size: 4rem;
+  font-family:var(--second-font);
+  color: var(--first-color-dark);
+}
+
+.nav_menu {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  font-size: 2rem;
+  padding: 1rem;
+  row-gap: 2rem;
+}
+
+.nav_link {
+  text-decoration: none;
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--second-font);
+  padding: 1rem;
+}
+
+.nav_link::after {
+  content: '';
+  width: 0;
+  height: 0.3rem;
+  background-color: var(--first-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width .4s;
+}
+.nav_link:hover::after {
+  width: 60%;
+}
+
+.sidebar_menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50vh;
+  width: 20vw;
+  z-index: 999;
+  backdrop-filter: blur(1rem);
+  box-shadow: -1rem 0 1rem rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.menu_btn {
+  display: none;
+}
+
+
+.intro h2 {
+  font-family: var(--second-font);
+  font-size: 4rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 2rem;
+  word-wrap: break-word;
+  padding: 2rem;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 1rem;;
+}
+
+.hero_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin: 4rem;
+  padding: 4rem;
+  height: 100%;
+}
+
+.order_btn {
+  width: 8vw;
+  height: 6vh;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  color: var(--white-color);
+  background-color: var(--first-color);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0.8rem 2.4rem hsla(353, 100%, 40%, .4);
+  transition: background-color .4s;
+}
+.order_btn:hover {
+  background-color: var(--first-color-alt);
+}
+
+.home_images {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+  padding: 2rem;
+}
+.home_ingredient {
+  width: 6vw;
+  filter: var(--shadow-small-img);
+  position: absolute;
+  z-index: 2;
+}
+
+.home_board, .home_pizza {
+  filter: var(--shadow-big-img);
+}
+.home_pizza {
+  width: 30vw;
+  z-index: 2;
+}
+.home_board {
+  width: 30vw;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.85rem;
+}
+
+.home_leaf_1 {
+  top: -1.6rem;
+}
+.home_pepperoni {
+  top: 4.5rem;
+  right: -0.3rem;
+}
+.home_olive {
+  bottom: -1.6rem;
+}
+.home_mushroom {
+  right: -0.7rem;
+  bottom: 6rem;
+}
+.home_leaf_2 {
+  left: -0.7rem;
+  bottom: 5rem;
+}
+.home_tomato {
+  left: -0.7rem;
+  top: 7rem;
+}
+
+
+.about_title {
+  color: var(--first-color-dark);
+  font-family: var(--second-font);
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem;
+}
+.about_img {
+  width: 35vw;
+  padding: 2rem;
+  filter: var(--shadow-big-img);
+}
+
+.about_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.about_box p {
+  font-family: var(--font-type);
+  font-size: 2.5rem;
+  word-wrap: break-word;
+  line-height: 5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.review_img {
+  border-radius: 5rem;
+  padding: 1rem;
+}
+.review_box p {
+  font-size: 1.5rem;
+  word-wrap: break-word;
+  padding: 0.5rem;
+
+}
+.review_box .name {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.review_box {
+  padding: 2rem;
+}
+
+.review_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.about_section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--container-color);
+}
+
+
+.popular_title {
+  color: var(--first-color-dark);
+  font-family: var(--second-font);
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.pizza_img {
+  width: 15vw;
+  padding: 2rem;
+}
+
+.box:hover {
+  transform: translateY(-3rem);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.box p {
+  font-size: 2rem;
+  font-family: var(--font-type);
+  padding: 1rem;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 2rem;
+  background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+  border-radius: 4rem;
+}
+
+.popular_main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  margin: 2rem;
+  padding: 2rem;
+}
+.popular_main2 {
+  display: grid;
+  grid-template-columns: auto auto ;
+  justify-content: space-evenly;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.popular_section {
+  margin: 2rem;
+  padding: 4rem;
+  border-radius: 2rem;
+}
+
+
+.recipe_section {
+  background-color: var(--container-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.recipe_list {
+  row-gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.recipe_img {
+  width: 6vw;
+  filter: var(--shadow-small-img);
+}
+
+.recipe_title {
+  font-family: var(--second-font);
+  font-size: 4rem;
+  color: var(--first-color-dark);
+  padding: 2rem;
+}
+
+.recipe_description {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.recipe_ingredient {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.recipe_pizza_img {
+  width: 30vw;
+  justify-self: center;
+  filter: var(--shadow-big-img);
+}
+
+
+.offer_img {
+  width: 20vw;
+  filter: var(--shadow-small-img);
+}
+.offer_img2 {
+  width: 15vw;
+  padding: 1rem;
+  filter: var(--shadow-small-img);
+}
+.offer_img:hover, .offer_img2:hover {
+  transform: translateY(-3rem);
+  transition: 0.5s;
+}
+
+.offer_box {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.offer_title {
+  color: var(--first-color-dark);
+  font-family: var(--second-font);
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.scrollable_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: var(--container-color);
+  border-radius: 2rem;
+  box-shadow: 0 0.8rem 2.4rem hsla(353, 100%, 8%, .1);
+}
+
+.price {
+  color: var(--first-color);
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+.product_name {
+  color: var(--first-color-dark);
+  font-family: var(--second-font);
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+.scrollable_box:hover {
+  cursor: pointer;
+}
+
+.buy_btn {
+  bottom: 1.5rem;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+  box-shadow: 0 0.4rem 1.6rem hsla(353, 100%, 40%, .4);
+  cursor: pointer;
+}
+.buy_btn:hover {
+  background-color: var(--first-color-alt);
+}
+
+.offer_section {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  background-color: var(--container-color);
+}
+
+
+.contact_container {
+  position: relative;
+  background-color: var(--first-color-dark);
+  padding-top: 4rem;
+  border-radius: 3.5rem;
+  overflow: hidden;
+}
+
+.contact_image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contact_img {
+  width: 25vw;
+  padding: 2rem;
+}
+
+.contact_main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact_title {
+  color: var(--white-color);
+  font-size: 4rem;
+  font-family: var(--second-font);
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.contact_info h3 {
+  color: var(--white-color);
+  font-size: 2.5rem;
+  font-family: var(--second-font);
+  text-align: center;
+  padding: 1rem;
+}
+.contact_info p {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 3rem;
+  color: var(--white-color);
+}
+.contact_info {
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.social_media_link {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  padding: 2rem;
+  gap: 2rem;
+  color: var(--first-color);
+}
+.social_media_link i:hover {
+  transform: translateY(-1rem);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.map {
+  text-align: center;
+  text-decoration: none;
+  padding-top: 1rem;
+}
+.map a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
+
+
+.footer_container {
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.details {
+  display: flex;
+  align-items:first baseline;
+  justify-content: space-evenly;
+}
+
+.pay_img {
+  padding: 1rem;
+}
+
+.payment h3,
+.newsletter h3,
+.social_link h3 {
+  color: var(--first-color-dark);
+  font-family: var(--second-font);
+  font-size: 3rem;
+  padding: 2rem;
+  text-align: center;
+}
+.contact p,
+.contact_address p,
+.newsletter p {
+  font-family: var(--font-type);
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.email_info {
+  background-color: var(--container-color);
+  box-shadow: 0 0.4rem 1.6rem hsla(353, 100%, 8%, .1);
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+.mail {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 14vw;
+  color: var(--title-color);
+}
+.btn {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  width: 8vw;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 0.4rem 1.6rem hsla(353, 100%, 8%, .1);
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.policy_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.policy_link a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+.social_link {
+  text-align: center;
+}
+.social_link i {
+  font-size: 2.5rem;
+  padding: 1rem;
+  color: var(--first-color);
+}
+.social_link i:hover {
+  cursor: pointer;
+}
+
+.mark {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+#myBtn {
+  display: none; 
+  position: fixed;
+  bottom: 2rem; 
+  right: 3rem; 
+  z-index: 99; 
+  border: none;
+  outline: none; 
+  background-color: var(--body-color); 
+  box-shadow: 0 0.4rem 1.6rem hsla(353, 100%, 8%, .2);
+  color: var(--title-color);
+  cursor: pointer;
+  padding: 1.5rem; 
+  border-radius: 1rem; 
+  font-size: 1.5rem; 
+}
+#myBtn:hover {
+  background-color: var(--first-color-alt); 
+}
+
+/* small device */
+@media screen and (max-width:320px) {
+  .intro h2, .popular_title h1, .about_title h1,
+  .recipe_title h1, .offer_title h1, .contact_title h1 {
+    font-size: 1.5rem;
+    padding: 2rem;
+  }
+  .intro p {
+    font-size: 1rem;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+  .order_btn {
+    width: 25vw;
+    height: 5vh;
+    font-size: 1rem;
+  }
+  .hero_section {
+    margin: 1rem;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .home_pizza {
+    width: 30vw;
+    z-index: 2;
+  }
+  .home_board {
+    width: 30vw;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.85rem;
+  }
+
+  .popular_section, .box {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .pizza_img {
+    width: 30vw;
+    padding: 0.5rem;
+  }
+  .popular_main, .popular_main2 {
+    grid-template-columns: auto;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .box {
+    border-radius: 1rem;
+  }
+
+  .recipe_description {
+    font-size: 1rem;
+  }
+
+  .offer_box {
+    grid-template-columns: auto;
+  }
+  .offer_box, .offer_section, .scrollable_box {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .offer_img2 {
+    width: 25vw;
+  }
+  .buy_btn {
+    width: 10vw;
+    height: 3vh;
+    border-radius: 0.5rem;
+  }
+
+  .review_main {
+    flex-direction: column;
+    padding: 0.5rem;
+    margin: 0;
+  }
+  .about_box{
+    padding: 0.5rem;
+  }
+  .about_box p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .contact_info, .contact_info p  {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .contact_info h3 {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  .contact_info p {
+    font-size: 1rem;
+  }
+  .contact_main {
+    flex-direction: column;
+  }
+  .contact_img {
+    width: 60vw;
+    padding: 1rem;
+  }
+  .contact_image {
+    justify-content: center;
+  }
+
+  .details {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .social_link h3, .payment h3, .newsletter h3 {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .pay_img {
+    width: 15vw;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .newsletter p {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  .email_info {
+    padding: 0.5rem;
+    border-radius: 3.5rem;
+  }
+  .mail input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 48vw;
+  }
+  .newsletter button {
+    width: 20vw;
+    font-size: 1rem;
+  }
+  .policy_link a {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .policy_link {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mark {
+    font-size: 1.2rem;
+    text-align: start;
+  }
+}
+
+/* medium device */
+@media screen and (max-width:468px) {
+  .hero_section {
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .intro p, .about_box p {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .intro button{
+    width: 25vw;
+  }
+
+  .home_pizza, .home_board {
+    width: 50vw;
+  }
+
+  .about_section {
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
+  .about_title, .popular_title, .contact_title {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .about_box p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 0.5rem;
+  }
+  .about_img {
+    padding: 0;
+    width: 20vw;
+  }
+  .about_box {
+    padding: 0.5rem;
+  }
+  .review_main {
+    display: none;
+  }
+  
+  .popular_section, .popular_main, .popular_main2 {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .popular_main, .popular_main2 {
+    grid-template-columns: auto;
+  }
+  .box {
+    padding: 1rem;
+    border-radius: 2rem;
+  }
+  .pizza_img {
+    padding: 0.5rem;
+    width: 20vw;
+  }
+
+  .offer_title {
+    font-size: 1.5rem;
+  }
+
+  .recipe_title {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  .recipe_ingredient {
+    column-gap: 0;
+  }
+  .recipe_description {
+    font-size: 1.2rem;
+    word-wrap: break-word;
+  }
+  .recipe_pizza_img {
+    width: 30vw;
+  }
+
+  .contact_main {
+    flex-direction: column;
+  }
+  .contact_img {
+    width: 60vw;
+  }
+  .contact_image {
+    justify-content: center;
+  }
+  .contact_info {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .contact_info p {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .details {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .details h3 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .pay_img {
+    width: 15vw;
+  }
+  .newsletter input {
+    font-size: 1.5rem;
+    width: 40vw;
+    padding: 0.5rem;
+  }
+  .newsletter button {
+    width: 20vw;
+  }
+  .email_info {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .nav_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding-block: 4.5rem 3.5rem;
+    box-shadow: 0 0.4rem 1.6rem hsla(353, 100%, 8%, .1);
+    transition: top .4s;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+  .menu_btn {
+    display: block;
+  }
+
+  .order_btn {
+    width: 12vw;
+  }
+
+  .about_box p{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  .review_main {
+    margin: 1rem;
+  }
+  .review_box {
+    padding: 0.5rem;
+  }
+  .review_img {
+    padding: 0.5rem;
+    width: 8vw;
+  }
+
+  .box {
+    padding: 1.5rem;
+    border-radius: 2rem;
+  }
+  .box p {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+  }
+
+  .offer_section {
+    padding: 2rem;
+  }
+  .offer_box {
+    padding: 1.5rem;
+  }
+  .scrollable_box {
+    padding: 1.5rem;
+  }
+  .scrollable_box p {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .pizza_img {
+    padding: 0.5rem;
+  }
+  .buy_btn {
+    font-size: 1rem;
+    width: 7vw;
+    height: 4vh;
+  }
+
+  .contact_info, .contact_info h3 {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .contact_info p {
+    font-size: 1.5rem;
+  }
+
+  .details h3 {
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .pay_img {
+    width: 8vw;
+    padding: 0.5rem;
+  }
+  .mail {
+    font-size: 1.3rem;
+    width: 22vw;
+  }
+  .btn {
+    font-size: 1.3rem;
+    width: 10vw;
+  }
+}

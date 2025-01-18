@@ -1,0 +1,273 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <link rel="shortcut icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="pizza.css">
+    <title>Pizza House</title>
+</head>
+<body>
+    <header class="header_container shadow_header">
+        <nav class="nav_container"> 
+            <div class="nav_title"> 
+                <h1>Pizza House</h1> 
+            </div>
+            
+            <div class="nav_menu">
+                <a href="#hero" class="nav_link hideOnMobile"> Home </a> 
+                <a href="#about" class="nav_link hideOnMobile"> About us </a> 
+                <a href="#popular" class="nav_link hideOnMobile"> Popular </a> 
+                <a href="#offer" class="nav_link hideOnMobile"> Products </a> 
+                <a href="#contact" class="nav_link hideOnMobile"> Contact </a> 
+                <i class="ri-menu-line menu_btn" onclick="showSidebar()"></i>
+            </div>
+            <div class="sidebar_menu nav_menu">
+                <i class="ri-close-large-line close_btn" onclick="hideSidebar()"></i>
+                <a href="#hero" class="nav_link"> Home </a> 
+                <a href="#about" class="nav_link"> About us </a> 
+                <a href="#popular" class="nav_link"> Popular </a> 
+                <a href="#offer" class="nav_link"> Products </a> 
+                <a href="#contact" class="nav_link"> Contact </a> 
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <section class="hero_section" id="hero">    
+            <div class="intro">
+                <h2>Slice into happiness </h2>
+                <p> The ultimate destination for the cheesiest, most delicious pizzas! 
+                    Our pizzas are handcrafted with the freshest ingredients, baked to perfection.
+                    Get ready to indulge in pizza like never before – because every bite counts!
+                </p>
+                <button type="submit" class="order_btn">Order Now</button>
+            </div> 
+            <div class="home_images">
+                <img src="assets/home-pizza.png" alt="pizza" class="home_pizza">
+                <img src="assets/home-board.png" alt="image" class="home_board">
+
+                <img src="assets/home-leaf-1.png" alt="image" class="home_ingredient home_leaf_1">
+                <img src="assets/home-leaf-2.png" alt="image" class="home_ingredient home_leaf_2">
+                <img src="assets/home-pepperoni.png" alt="image" class="home_ingredient home_pepperoni">
+                <img src="assets/home-mushroom.png" alt="image" class="home_ingredient home_mushroom">
+                <img src="assets/home-olive.png" alt="image" class="home_ingredient home_olive">
+                <img src="assets/home-tomato.png" alt="image" class="home_ingredient home_tomato">
+            </div>
+        </section>
+
+        <section class="about_section" id="about">
+            <div class="about_title">
+                <h1>Learn More About <br> Our History</h1>
+            </div>
+            <div class="about_box">
+                <img src="assets/about-img.png" alt="image" class="about_img">
+                <p> We are dedicated to bringing you the perfect pizza experience, whether you're a fan of classic flavors 
+                    or love exploring bold, creative toppings.  <br>
+                    We believe in making your moments special – whether it’s a 
+                    cozy family dinner, a celebration with friends, or a midnight craving. 
+                </p>
+            </div>
+            <div class="review_main">
+                <img src="assets/user1.jpg" alt="user" width="100" class="review_img">
+                <div class="review_box">
+                    <p class="name">Sophia</p> 
+                    <p>"Absolutely fantastic! The crust was perfectly crispy, and the toppings were so fresh and flavorful."</p>
+                </div> 
+                <img src="assets/user2.avif" alt="user" width="100" class="review_img">
+                <div class="review_box">
+                    <p class="name">Ethan</p>
+                    <p>"Great experience! I loved the customizable options to add extra toppings."</p>
+                </div>
+                <img src="assets/user3.jpeg" alt="user" width="100" class="review_img">
+                <div class="review_box">
+                    <p class="name">John W.</p>
+                    <p>"This place is a gem! The Pepperoni Pizza was perfection – cheesy, spicy, and just the right amount of sauce." </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular_section" id="popular">
+            <div class="popular_title">
+                <h1>Popular Items</h1>
+            </div>
+            <div class="popular_main">
+                <div class="box">
+                    <img src="assets/margherita.png" alt="image" class="pizza_img">
+                    <p> Margherita Pizza </p>
+                </div>
+                <div class="box">
+                    <img src="assets/marinara.png" alt="image" class="pizza_img">
+                    <p> Marinara Pizza </p>
+                </div>
+                <div class="box">
+                    <img src="assets/mexican.png" alt="image" class="pizza_img">
+                    <p> Mexican Pizza </p>
+                </div>
+            </div>
+            <div class="popular_main2">
+                <div class="box">
+                    <img src="assets/chicken-tikka.png" alt="image" class="pizza_img">
+                    <p> Chicken Tikka Pizza </p>
+                </div>
+                <div class="box">
+                    <img src="assets/pepperoni.png" alt="image" class="pizza_img">
+                    <p> Pepperoni Pizza </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe_section">
+            <div class="recipe_title">
+                <h1>Fresh and <br> Natural Ingredients </h1>
+            </div>
+            <div class="recipe_list">
+                <div class="recipe_ingredient">
+                    <img src="assets/recipe-flour.png" alt="image" class="recipe_img">
+                    <div class="recipe_description">
+                        <h3>Flour</h3>
+                        <p>The best wheat from the field for the best flour.</p>
+                    </div>
+                </div>
+                <div class="recipe_ingredient">
+                    <img src="assets/recipe-cheese.png" alt="image" class="recipe_img">
+                    <div class="recipe_description">
+                        <h3>Cheese</h3>
+                        <p>Indulge in cheese for a healthy future.</p>
+                    </div>
+                </div>
+                <div class="recipe_ingredient">
+                    <img src="assets/recipe-sauces.png" alt="image" class="recipe_img">
+                    <div class="recipe_description">
+                        <h3>Sauces</h3>
+                        <p>Add a touch of salsa to your life & it will taste better.</p>
+                    </div>
+                </div>
+                <div class="recipe_ingredient">
+                    <img src="assets/recipe-tomato.png" alt="image" class="recipe_img">
+                    <div class="recipe_description">
+                        <h3>Vegetables</h3>
+                        <p>Vegetables full of the essence of nature and organic.</p>
+                    </div>
+                </div>
+                <div class="recipe_ingredient">
+                    <img src="assets/recipe-meat.png" alt="image" class="recipe_img">
+                    <div class="recipe_description">
+                        <h3>Meat</h3>
+                        <p>The best fresh meat for your health.</p>
+                    </div>
+                </div>
+                <img src="assets/recipe-img.png" alt="image" class="recipe_pizza_img">
+            </div>
+        </section>
+
+        <section class="offer_section" id="offer">
+            <div class="offer_title">
+                <h1>The Most <br> Devoured Pizzas</h1>
+            </div>
+
+            <div class="offer_box">
+                <div class="scrollable_box">
+                    <img src="assets/offer1-californian-new.png" alt="image" class="offer_img">
+                    <p class="product_name">Californian Pizza</p>
+                    <p class="price">$20</p>
+                    <button type="submit" class="buy_btn"> <i class="ri-shopping-bag-3-fill"></i> </button>
+                </div>
+                <div class="scrollable_box">
+                    <img src="assets/offer2-mixveg-new.png" alt="image" class="offer_img">
+                    <p class="product_name">Vegetable Pizza</p>
+                    <p class="price">$25</p>
+                    <button type="submit" class="buy_btn"> <i class="ri-shopping-bag-3-fill"></i> </button>
+                </div>
+                <div class="scrollable_box">
+                    <img src="assets/product-4.png" alt="image" class="offer_img2">
+                    <p class="product_name">Mushroom Pizza</p>
+                    <p class="price">$30</p>
+                    <button type="submit" class="buy_btn"> <i class="ri-shopping-bag-3-fill"></i> </button>
+                </div>
+                <div class="scrollable_box">
+                    <img src="assets/product-3.png" alt="image" class="offer_img2">
+                    <p class="product_name">Margherita Pizza</p>
+                    <p class="price">$10</p>
+                    <button type="submit" class="buy_btn"> <i class="ri-shopping-bag-3-fill"></i> </button>
+                </div>
+            </div>     
+        </section>  
+
+        <section class="contact_section" id="contact">
+            <div class="contact_container">
+                <div class="contact_title">
+                    <h1>Contact Now</h1>
+                </div>
+                <div class="contact_main">
+                    <div class="contact_image">
+                        <img src="assets/contact-img.png" alt="image" class="contact_img">
+                    </div>
+                    <div class="contact_info">
+                        <h3>Write Us</h3>
+                        <div class="social_media_link">
+                            <i class="ri-whatsapp-fill"></i>
+                            <i class="ri-instagram-line"></i>
+                            <i class="ri-twitter-x-line"></i>
+                            <i class="ri-facebook-circle-fill"></i>
+                        </div>
+                    </div>
+                    <div class="contact_info">
+                        <h3>Delivery</h3>
+                        <p class="contact_address">
+                            +00-987-7645-321 <br> +11-012345 
+                        </p>
+                    </div>
+                    <div class="contact_info">
+                        <h3>Location</h3>
+                        <p>Sun City - Peru <br> Av. Moon #4321</p>
+                        <div class="map"> <a href="#"> <i class="ri-map-pin-fill"></i> View on Map </a> </div>
+                    </div>
+                </div>
+            </div>     
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div class="details">
+                <div class="social_link"> 
+                    <h3>Connect with us</h3>
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-twitter-x-line"></i>
+                    <i class="ri-facebook-circle-fill"></i>
+                </div> 
+                <div class="payment_option">
+                    <div class="payment">
+                        <h3>Payment Options</h3>
+                        <img src="assets/footer-card-1.png" alt="image" class="pay_img">
+                        <img src="assets/footer-card-2.png" alt="image" class="pay_img">
+                        <img src="assets/footer-card-3.png" alt="image" class="pay_img">
+                        <img src="assets/footer-card-4.png" alt="image" class="pay_img">
+                    </div>
+                </div>
+                <div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Be the first to know about new offers</p>
+                    <div class="email_info">
+                        <input type="email" placeholder="Email" class="mail">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                </div>
+            </div> 
+            <div class="policy_link">
+                <a href="#" class="policy">Terms & Agreements</a>
+                <a href="#" class="policy">Privacy Policy</a>
+            </div>
+            <div class="mark">@ 2025 Pizza House | All rights reserved</div>
+        </div>
+        
+        <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="ri-arrow-up-line"></i> </button>
+    </footer>
+
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="pizza.js"></script>
+</body>
+</html>
