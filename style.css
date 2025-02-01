@@ -656,8 +656,8 @@ body {
     font-size: 1.5rem;
     padding: 2rem;
   }
-  .nav_menu {
-    padding-block: 2rem 2rem;
+  .nav_container {
+    height: 2.5rem;
   }
   .intro p {
     font-size: 1rem;
@@ -672,17 +672,17 @@ body {
     font-size: 1rem;
   }
   .hero_section {
-    margin: 1rem;
-    padding: 1rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
     flex-direction: column;
   }
 
   .home_pizza {
-    width: 30vw;
+    width: 25vw;
     z-index: 2;
   }
   .home_board {
-    width: 30vw;
+    width: 25vw;
     position: absolute;
     bottom: 1.5rem;
     left: 1.85rem;
@@ -708,6 +708,9 @@ body {
   .recipe_description {
     font-size: 1rem;
   }
+  .recipe_pizza_img {
+    display: flex;
+  }
 
   .offer_box {
     grid-template-columns: auto;
@@ -724,6 +727,9 @@ body {
     height: 3vh;
     border-radius: 0.5rem;
   }
+  .scrollable_box i {
+    justify-self: center;
+  }
 
   .review_main {
     flex-direction: column;
@@ -732,7 +738,7 @@ body {
   }
   .about_section {
     padding-top: 2rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
   .about_box{
     padding: 0.5rem;
@@ -793,10 +799,10 @@ body {
   .mail input {
     font-size: 1rem;
     padding: 0.5rem;
-    width: 48vw;
+    width: 52vw;
   }
   .newsletter button {
-    width: 20vw;
+    width: 22vw;
     font-size: 1rem;
   }
   .policy_link a {
@@ -812,7 +818,6 @@ body {
     text-align: start;
   }
 }
-
 /* medium device */
 @media screen and (max-width:468px) {
   .nav_menu {
