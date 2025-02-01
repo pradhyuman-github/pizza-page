@@ -656,6 +656,9 @@ body {
     font-size: 1.5rem;
     padding: 2rem;
   }
+  .nav_menu {
+    padding-block: 2rem 2rem;
+  }
   .intro p {
     font-size: 1rem;
     text-align: center;
@@ -726,6 +729,10 @@ body {
     flex-direction: column;
     padding: 0.5rem;
     margin: 0;
+  }
+  .about_section {
+    padding-top: 2rem;
+    margin-top: 5rem;
   }
   .about_box{
     padding: 0.5rem;
@@ -808,6 +815,9 @@ body {
 
 /* medium device */
 @media screen and (max-width:468px) {
+  .nav_menu {
+    padding-block: 3rem 2rem;
+  }
   .hero_section {
     flex-direction: column;
     padding: 1rem;
@@ -882,6 +892,7 @@ body {
   }
   .recipe_pizza_img {
     width: 30vw;
+    display: flex;
   }
 
   .contact_main {
