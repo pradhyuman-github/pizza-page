@@ -653,7 +653,7 @@ body {
 @media screen and (max-width:320px) {
   .intro h2, .popular_title h1, .about_title h1,
   .recipe_title h1, .offer_title h1, .contact_title h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding: 2rem;
   }
   .nav_container {
@@ -666,11 +666,7 @@ body {
     padding: 0;
     padding-bottom: 2rem;
   }
-  .order_btn {
-    width: 25vw;
-    height: 5vh;
-    font-size: 1rem;
-  }
+  
   .hero_section {
     margin-bottom: 4rem;
     padding: 2rem;
@@ -716,7 +712,6 @@ body {
     grid-template-columns: auto;
   }
   .offer_box, .offer_section, .scrollable_box {
-    margin: 0.5rem;
     padding: 0.5rem;
   }
   .offer_img2 {
@@ -786,7 +781,6 @@ body {
   .newsletter {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
   }
   .newsletter p {
     font-size: 1.2rem;
@@ -815,14 +809,12 @@ body {
   }
   .mark {
     font-size: 1.2rem;
-    text-align: start;
+    text-align: center;
   }
 }
+
 /* medium device */
 @media screen and (max-width:468px) {
-  .nav_menu {
-    padding-block: 3rem 2rem;
-  }
   .hero_section {
     flex-direction: column;
     padding: 1rem;
@@ -833,11 +825,24 @@ body {
     font-size: 2rem;
   }
   .intro button{
-    width: 25vw;
+    width: 30vw;
+    font-size: 1.4rem;
   }
 
   .home_pizza, .home_board {
     width: 50vw;
+  }
+  .home_ingredient {
+    width: 8vw;
+  }
+  .home_leaf_1 {
+    left: 5rem;
+  }
+  .home_mushroom {
+    bottom: 4rem;
+  }
+  .home_tomato {
+    top: 3rem;
   }
 
   .about_section {
@@ -855,7 +860,6 @@ body {
   }
   .about_img {
     padding: 0;
-    width: 20vw;
   }
   .about_box {
     padding: 0.5rem;
@@ -864,24 +868,36 @@ body {
     display: none;
   }
   
-  .popular_section, .popular_main, .popular_main2 {
+  .popular_section {
     margin: 1rem;
     padding: 1rem;
   }
   .popular_main, .popular_main2 {
-    grid-template-columns: auto;
+    grid-template-columns: repeat(1, 18rem);
+    padding: 1rem;
+    margin: 0.5rem;
   }
   .box {
     padding: 1rem;
     border-radius: 2rem;
   }
+  .box:hover {
+    transform: none;
+  }
   .pizza_img {
     padding: 0.5rem;
-    width: 20vw;
+    width: 25vw;
   }
 
   .offer_title {
     font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .offer_img {
+    width: 25vw;
+  }
+  .offer_img2 {
+    width: 28vw;
   }
 
   .recipe_title {
@@ -890,6 +906,7 @@ body {
   }
   .recipe_ingredient {
     column-gap: 0;
+    padding-left: 1.5rem;
   }
   .recipe_description {
     font-size: 1.2rem;
@@ -928,16 +945,16 @@ body {
     padding: 1rem;
     text-align: center;
   }
-  .pay_img {
+  .payment img{
     width: 15vw;
   }
   .newsletter input {
     font-size: 1.5rem;
-    width: 40vw;
+    width: 44vw;
     padding: 0.5rem;
   }
   .newsletter button {
-    width: 20vw;
+    width: 21vw;
   }
   .email_info {
     padding: 0.5rem;
@@ -951,7 +968,7 @@ body {
     left: 0;
     width: 100%;
     background-color: var(--body-color);
-    padding-block: 4.5rem 3.5rem;
+    padding-block: 2.5rem 2.5rem;
     box-shadow: 0 0.4rem 1.6rem hsla(353, 100%, 8%, .1);
     transition: top .4s;
   }
@@ -983,6 +1000,7 @@ body {
 
   .box {
     padding: 1.5rem;
+    margin: 1rem;
     border-radius: 2rem;
   }
   .box p {
@@ -991,25 +1009,37 @@ body {
     word-wrap: break-word;
   }
 
+  .recipe_pizza_img {
+    display: flex;
+  }
+
   .offer_section {
-    padding: 2rem;
+    padding: 1rem;
   }
   .offer_box {
-    padding: 1.5rem;
+    padding: 1rem;
+    margin: 1rem;
   }
   .scrollable_box {
     padding: 1.5rem;
+    margin: 1.5rem;
   }
   .scrollable_box p {
     font-size: 1.5rem;
     padding: 0.5rem;
+  }
+  .scrollable_box i {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .pizza_img {
     padding: 0.5rem;
   }
   .buy_btn {
     font-size: 1rem;
-    width: 7vw;
+    width: 9vw;
     height: 4vh;
   }
 
@@ -1024,6 +1054,12 @@ body {
   .details h3 {
     padding: 0.5rem;
     font-size: 2rem;
+  }
+  .social_media_link {
+    padding: 1rem;
+  }
+  .social_link, .payment, .newsletter {
+    padding: 0.5rem;
   }
   .pay_img {
     width: 8vw;
