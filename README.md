@@ -1,6 +1,7 @@
-## Watch [here](https://pradhyuman-github.github.io/pizza-page/)
+## Pizza House 
+**Live Demo:** CLick [here](https://pradhyuman-github.github.io/pizza-page/)
 
-**Pizza House** is a responsive webpage designed as a pizza website, built using HTML, CSS, and JavaScript.
+It is a responsive webpage designed as a pizza website, built using HTML, CSS, and JavaScript.
 
 Its features:
 - Visually appealing user interface with a clean design
